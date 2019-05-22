@@ -8,6 +8,8 @@ const server = new ApolloServer({
   resolvers,
   mocks: true,
   mockEntireSchema: false,
+  introspection: true,
+  playground: true,
   context: async ({ req }) => {
     const token = (req.headers && req.headers.authorization) || '';
     // if the email isn't formatted validly, return null for user
