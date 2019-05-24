@@ -10,8 +10,6 @@ const createToken = (expirationPeriod = DEFAULT_TOKEN_EXPIRATION_PERIOD) => ({
   expiresAt: new Date(Date.now() + expirationPeriod),
 });
 
-
-
 const tokenSchema = new mongoose.Schema({
   token: String,
   expiresAt: Date,
@@ -30,8 +28,6 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.addToken = async function() {
   const token = createToken();
   await this.update({
-    _id: this._id,
-  }, {
     $addToSet: {
       tokens: token,
     },
@@ -51,6 +47,9 @@ userSchema.statics.login = async function ({ username, password }) {
   }
 
   const token = await user.addToken();
+
+  await user.save();
+
   return token;
 };
 

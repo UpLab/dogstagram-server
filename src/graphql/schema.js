@@ -17,7 +17,7 @@ type Dog {
   _id: String!
   name: String!
   breed: String!
-  "Date of birth has YYYY-MM-DD format. Example 20-08-2009"
+  "Date of birth has YYYY-MM-DD format. Example 2009-08-20"
   dob: String!
   sex: Sex!
   status: String
@@ -76,14 +76,17 @@ type Mutation {
 
   "Updates a dog"
   updateDog(
-    id: String!
-    name: String!
-    breed: String!
-    dob: String!
-    sex: Sex!
+    _id: String!
+    name: String
+    breed: String
+    dob: String
+    sex: Sex
     status: String
     image: String
   ): Dog!
+
+  removeDog(_id: String!): String!
+
   logout: Boolean
 }
 
