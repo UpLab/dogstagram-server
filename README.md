@@ -26,7 +26,7 @@ To check authorization, you can use 'me' query that returns currently logged in 
 
 ```
 mutation signUp {
-  login(
+  signUp(
     username: "ihor"
     password: "1"
   ) {
