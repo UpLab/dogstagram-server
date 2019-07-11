@@ -6,8 +6,8 @@ import { User } from '../models';
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  mocks: true,
-  mockEntireSchema: false,
+  // mocks: true,
+  // mockEntireSchema: false,
   introspection: true,
   playground: true,
   context: async ({ req }) => {

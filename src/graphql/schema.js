@@ -48,6 +48,8 @@ type Query {
     lat: Float!
     "longitude"
     lng: Float! 
+    "meters"
+    radius: Int!
   ): [Dog]!
 }
 
