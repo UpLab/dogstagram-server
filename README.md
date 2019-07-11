@@ -6,7 +6,7 @@
 
 ## Start
 
-1. Start mongodb on localhost:27017
+1. Start mongodb on localhost:27017 (`mongo`)
 2. `npm run start`
 
 ## GraphQL Playground
@@ -26,7 +26,7 @@ To check authorization, you can use 'me' query that returns currently logged in 
 
 ```
 mutation signUp {
-  login(
+  signUp(
     username: "ihor"
     password: "1"
   ) {
