@@ -6,7 +6,7 @@
 
 ## Start
 
-1. Start mongodb on localhost:27017
+1. Start mongodb on localhost:27017 (`mongo`)
 2. `npm run start`
 
 ## GraphQL Playground
